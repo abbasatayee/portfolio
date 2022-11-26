@@ -38,7 +38,7 @@ export const Navigation = ({ isOpen, toggleOpen }: any) => {
         data-scroll-target="#menu-target"
         className="menu-top"
       >
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <a className="brand-logo">
             <img
               className="brand-logo__icon"
