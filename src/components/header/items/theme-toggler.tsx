@@ -10,6 +10,8 @@ import useToggleTheme from "@hooks/toggle-theme";
 export default function ThemeToggler() {
   const { theme, setTheme } = useToggleTheme();
 
+  console.log(theme)
+
   if (theme === "light") {
     return (
       <ThemeTogglerItem onClick={() => setTheme("dark")} Icon={MoonIcon} />
@@ -20,12 +22,12 @@ export default function ThemeToggler() {
     return (
       <ThemeTogglerItem
         Icon={ComputerDesktopIcon}
-        onClick={() => setTheme("light")}
+        onClick={() => setTheme("system")}
       />
     );
   }
 
-  return <ThemeTogglerItem onClick={() => setTheme("system")} Icon={SunIcon} />;
+  return <ThemeTogglerItem onClick={() => setTheme("light")} Icon={SunIcon} />;
 }
 
 interface ThemeTogglerItemProps {
