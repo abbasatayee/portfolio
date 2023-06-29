@@ -7,7 +7,7 @@ import Providers from "@components/providers";
 const font = Roboto({
   subsets: ["latin"],
   variable: "--font-roboto",
-  weight: ["100", "300", "400", "500", "700", "900"],
+  weight: ["100", "300", "400", "500", "700", "900", "1000"],
 });
 
 interface RootLayoutProps {
