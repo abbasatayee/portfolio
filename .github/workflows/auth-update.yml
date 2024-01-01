@@ -16,7 +16,7 @@ jobs:
     - name: Set up Git
       run: |
         git config --global user.name 'abbasatayee'
-        git config --global user.email 'abbas.ataie.af@gmail.com'
+        git config --global user.email 'abbas.ataie.montazer@gmail.com'
 
     - name: Update README
       run: |
