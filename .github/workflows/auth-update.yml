@@ -1,0 +1,26 @@
+name: Auto Update
+
+on:
+  schedule:
+    - cron:  '0 */2 * * *'  # Runs every 2 hours
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Set up Git
+      run: |
+        git config --global user.name 'abbasatayee'
+        git config --global user.email 'abbas.ataie.af@gmail.com'
+
+    - name: Update README
+      run: |
+        echo "Last updated at $(date)" >> README.md
+        git add README.md
+        git commit -m "Automated README update $(date)"
+        git push
