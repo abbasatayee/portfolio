@@ -23,4 +23,5 @@ jobs:
         echo "Last updated at $(date)" >> README.md
         git add README.md
         git commit -m "Automated README update $(date)"
-        git push
+        git push https://$GH_TOKEN@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
+
